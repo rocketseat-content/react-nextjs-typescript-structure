@@ -8,10 +8,10 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
   extends: [
     'airbnb',
@@ -53,21 +53,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: [
-        '**/*.test.js',
-      ],
+      files: ['**/*.test.js'],
       env: {
         jest: true,
       },
-      extends: [
-        'plugin:jest-dom/recommended',
-        'plugin:testing-library/react',
-      ],
-      plugins: [
-        'jest',
-        'jest-dom',
-        'testing-library',
-      ],
+      extends: ['plugin:jest-dom/recommended', 'plugin:testing-library/react'],
+      plugins: ['jest', 'jest-dom', 'testing-library'],
       rules: {
         'jest/no-disabled-tests': 'warn',
         'jest/no-focused-tests': 'error',
