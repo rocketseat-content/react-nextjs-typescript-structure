@@ -2,10 +2,11 @@ import React from 'react'
 import Head from 'next/head'
 
 import RocketseatLogo from '../assets/rocketseat.svg'
-
 import { Container } from '../styles/pages/Home'
 
 const Home: React.FC = () => {
+  const name = 'my-name';
+
   return (
     <Container>
       <Head>
@@ -13,7 +14,7 @@ const Home: React.FC = () => {
       </Head>
 
       <RocketseatLogo />
-      <h1>ReactJS Structure</h1>
+      <h1>{name} - ReactJS Structure</h1>
       <p>A ReactJS + Next.js structure made by Rocketseat.</p>
     </Container>
   )
