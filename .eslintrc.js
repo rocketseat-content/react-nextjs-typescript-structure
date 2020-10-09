@@ -26,6 +26,7 @@ module.exports = {
   plugins: ['react', 'jsx-a11y', 'import', 'prettier', '@typescript-eslint'],
   rules: {
     'prettier/prettier': 'error',
+    'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
     'react/prop-types': 'off',
     'react/jsx-handler-names': [
       'error',
@@ -50,6 +51,7 @@ module.exports = {
     ],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }],
+    curly: ['error', 'all'],
   },
   overrides: [
     {
