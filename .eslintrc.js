@@ -19,7 +19,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'prettier',
     'prettier/@typescript-eslint',
-    'prettier/react',
     'prettier/standard',
     'prettier/react',
   ],
@@ -49,11 +48,28 @@ module.exports = {
         ],
       },
     ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        mjs: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }],
     curly: ['error', 'all'],
   },
   overrides: [
+    {
+      files: ['**/*.ts'],
+      rules: {
+        'import/prefer-default-export': 'off',
+      },
+    },
     {
       files: ['**/*.test.js'],
       env: {
@@ -70,4 +86,12 @@ module.exports = {
       },
     },
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
+      },
+    },
+    'import/extensions': ['.js', '.ts', '.mjs', '.jsx', '.tsx'],
+  },
 };
