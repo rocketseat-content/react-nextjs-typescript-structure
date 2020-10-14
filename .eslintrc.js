@@ -80,12 +80,6 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/*.ts'],
-      rules: {
-        'import/prefer-default-export': 'off',
-      },
-    },
-    {
       files: ['**/*.test.ts'],
       env: {
         jest: true,
