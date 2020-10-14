@@ -1,14 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Head from 'next/head';
+import Head from "next/head";
 
-import { Container } from '../styles/pages/Home';
+import Container from "../styles/pages/Home";
 
 const Home: React.FC = () => {
   const name = `my-name ${Date.now()}`;
+  const { log } = console;
 
-  if (name === '1212312') {
-    console.warn('test');
+  if (name === "1212312") {
+    log("test");
   }
 
   return (
