@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 31 2021 21:47:34 GMT-0300 (Horário Padrão de Brasília)
+------------------------------------------------------
+
+Modified files:
+* src/pages/index.tsx
+
+
+Created files:
+* .autogit/autogit.json
+
+
+Deleted files:
+
+
+Renamed files:
