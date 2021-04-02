@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Apr 01 2021 21:37:13 GMT-0300 (Horário Padrão de Brasília)
+------------------------------------------------------
+
+Modified files:
+* src/components/AppBar/index.tsx
+* src/pages/_document.tsx
+* src/pages/index.tsx
+* src/styles/pages/components/AppBar/index.ts
+
+
+Created files:
+* .autogit/logs/log-31-2-2021-23-46-9.txt
+
+
+Deleted files:
+
+
+Renamed files:
