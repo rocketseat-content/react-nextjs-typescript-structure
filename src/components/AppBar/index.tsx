@@ -18,10 +18,12 @@ const AppBar: React.FC = () => {
         <ul>
           {items.map(item => (
             <li {...items} key={item.id}>
-              <span className="icon">
-                <i className={item.icon} />
-              </span>
-              <span className="tittle">{item.tittle}</span>
+              <a>
+                <span className="icon">
+                  <i className={item.icon} />
+                </span>
+                <span className="tittle">{item.tittle}</span>
+              </a>
             </li>
           ))}
         </ul>

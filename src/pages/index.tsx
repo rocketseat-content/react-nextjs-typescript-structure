@@ -11,7 +11,6 @@ const Home: React.FC = () => {
         <title>Home Page</title>
       </Head>
       <AppBar />
-      <h1>Jurandi Viadin</h1>
     </Container>
   )
 }
