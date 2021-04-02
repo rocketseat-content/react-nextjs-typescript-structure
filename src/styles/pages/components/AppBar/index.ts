@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
 export const AppBarContainer = styled.div`
-  position: relative;
+  position: fixed;
+  z-index: 1000;
+  left: 1rem;
+  top: calc(50% - 180px);
 
   & > .navigation {
     position: relative;
