@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
 import React, {
   InputHTMLAttributes,
   ReactNode,
@@ -42,21 +41,8 @@ const DragMove: React.FC<props> = props => {
     onPointerMove(e)
   }
 
-  useEffect(() => {
-    window.addEventListener('pointerup', handlePointerUp)
-
-    return () => {
-      window.removeEventListener('pointerup', handlePointerUp)
-    }
-  }, [])
-
   return (
-    <div
-      onPointerDown={handlePointerDown}
-      onPointerMove={handlePointerMove}
-      style={style}
-      className={className}
-    >
+    <div style={style} className={className}>
       {children}
     </div>
   )
@@ -75,7 +61,15 @@ DragMove.propTypes = {
 }
 
 DragMove.defaultProps = {
-  onPointerDown: () => {},
-  onPointerUp: () => {},
-  onPointerMove: () => {}
+  onPointerDown: () => {
+    console.log('onPointerDown')
+  },
+  onPointerUp: () => {
+    console.log('onPointerDown')
+  },
+  onPointerMove: () => {
+    console.log('onPointerDown')
+  }
 }
+
+export default DragMove

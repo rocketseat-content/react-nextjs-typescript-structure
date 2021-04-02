@@ -5,8 +5,8 @@ export const AppBarContainer = styled.div`
 
   & div.navigation {
     position: relative;
-    width: 80px;
-    height: 360px;
+    width: 16em;
+    height: 16em;
     background: #fff;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -30,5 +30,9 @@ export const AppBarContainer = styled.div`
     top: 0;
     left: 0;
     width: 100%;
+  }
+
+  & div.navigation ul li span {
+    background: #fff;
   }
 `

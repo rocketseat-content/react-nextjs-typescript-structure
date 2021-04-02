@@ -10,15 +10,14 @@ const AppBar: React.FC = () => {
     { id: '005', tittle: 'Settings', icon: 'fa fa-cog' },
     { id: '006', tittle: 'Sing-Out', icon: 'fa fa-sign-out' }
   ])
-  useEffect(() => console.log(items), [items])
+  useEffect(() => console.log(items), [])
 
   return (
     <AppBarContainer>
       <div draggable="true" className="navigation">
         <ul>
           {items.map(item => (
-            // eslint-disable-next-line react/jsx-key
-            <li>
+            <li {...items} key={item.id}>
               <span className="icon">
                 <i className={item.icon} />
               </span>
