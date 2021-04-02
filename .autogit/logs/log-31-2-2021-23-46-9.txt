@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 31 2021 23:46:09 GMT-0300 (Horário Padrão de Brasília)
+------------------------------------------------------
+
+Modified files:
+* src/pages/index.tsx
+
+
+Created files:
+* src/components/AppBar/index.tsx
+* src/components/Footer/index.tsx
+* src/components/index.tsx
+* src/styles/pages/components/AppBar/index.ts
+
+
+Deleted files:
+
+
+Renamed files:

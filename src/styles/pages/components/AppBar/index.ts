@@ -1,32 +1,34 @@
 import styled from 'styled-components'
 
 export const AppBarContainer = styled.div`
-  width: 100vw;
-  height: 100vh;
+  position: relative;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  ul {
+  & div.navigation {
+    position: relative;
+    width: 80px;
+    height: 360px;
     background: #fff;
-    color: #9999;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+  }
+  & div.navigation.active {
+    width: 300px;
   }
 
-  ul li:hover {
-    background: pink;
-  }
-
-  h1 {
-    font-size: 54px;
-    color: ${props => props.theme.colors.primary};
-    margin-top: 40px;
-  }
-
-  p {
-    margin-top: 24px;
-    font-size: 24px;
-    line-height: 32px;
+  & div.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 `

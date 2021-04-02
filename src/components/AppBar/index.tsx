@@ -14,12 +14,20 @@ const AppBar: React.FC = () => {
 
   return (
     <AppBarContainer>
-      <ul>
-        {items.map(item => (
-          // eslint-disable-next-line react/jsx-key
-          <li>{item.tittle}</li>
-        ))}
-      </ul>
+      <div draggable="true" className="navigation">
+        <ul>
+          {items.map(item => (
+            // eslint-disable-next-line react/jsx-key
+            <li>
+              <span className="icon">
+                <i className={item.icon} />
+              </span>
+              <span className="tittle">{item.tittle}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div className="toggle" />
     </AppBarContainer>
   )
 }
