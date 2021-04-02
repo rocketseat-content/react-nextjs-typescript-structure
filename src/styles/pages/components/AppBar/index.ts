@@ -38,7 +38,7 @@ export const AppBarContainer = styled.div`
     display: flex;
     text-decoration: none;
     color: ${props => props.theme.colors.primary.color};
-    font-weight: 6d00;
+    font-weight: 600;
   }
 
   & > .navigation ul li a .icon {
