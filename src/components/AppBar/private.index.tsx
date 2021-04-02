@@ -1,7 +1,17 @@
-import React, { useEffect, useState } from 'react'
+/* eslint-disable @typescript-eslint/no-empty-function */
+import React, {
+  InputHTMLAttributes,
+  ReactNode,
+  useEffect,
+  useState
+} from 'react'
 import PropTypes from 'prop-types'
 
-export default function DragMove(props): React.FC {
+interface props extends InputHTMLAttributes<DragEvent> {
+  onDragMove: any
+}
+
+const DragMove: React.FC<props> = props => {
   const {
     onPointerDown,
     onPointerUp,
@@ -10,23 +20,23 @@ export default function DragMove(props): React.FC {
     children,
     style,
     className
-  } = props
+  }: typeof props = props
 
   const [isDragging, setIsDragging] = useState(false)
 
-  const handlePointerDown = e => {
+  const handlePointerDown = (e: React.PointerEvent<DragEvent>) => {
     setIsDragging(true)
 
     onPointerDown(e)
   }
 
-  const handlePointerUp = e => {
+  const handlePointerUp = (e: React.PointerEvent<DragEvent>) => {
     setIsDragging(false)
 
     onPointerUp(e)
   }
 
-  const handlePointerMove = e => {
+  const handlePointerMove = (e: React.PointerEvent<DragEvent>) => {
     if (isDragging) onDragMove(e)
 
     onPointerMove(e)
