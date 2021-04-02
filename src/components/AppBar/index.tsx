@@ -13,6 +13,11 @@ const AppBar: React.FC = () => {
 
   const activeSlideRef = useRef(null)
 
+  const toggleApp = props => {
+    props.currentTarget.classList.toggle('active')
+    document.querySelector('.navigation').classList.toggle('active')
+  }
+
   useEffect(() => console.log(items), [])
 
   return (
@@ -31,7 +36,7 @@ const AppBar: React.FC = () => {
           ))}
         </ul>
       </div>
-      <div className="toggle" />
+      <div className="toggle" onClick={toggleApp} />
     </AppBarContainer>
   )
 }

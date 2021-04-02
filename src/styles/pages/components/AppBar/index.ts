@@ -5,8 +5,8 @@ export const AppBarContainer = styled.div`
 
   & > .navigation {
     position: relative;
-    width: 300px;
-    height: 420px;
+    width: 80px;
+    height: 360px;
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
@@ -38,6 +38,7 @@ export const AppBarContainer = styled.div`
     display: flex;
     text-decoration: none;
     color: ${props => props.theme.colors.primary.color};
+    font-weight: 6d00;
   }
 
   & > .navigation ul li a .icon {
@@ -87,5 +88,11 @@ export const AppBarContainer = styled.div`
     text-align: center;
     font-size: 16px;
     color: ${props => props.theme.colors.background};
+  }
+  & .toggle.active::before {
+    content: '\f053';
+  }
+  & > .navigation.active {
+    width: 300px;
   }
 `
