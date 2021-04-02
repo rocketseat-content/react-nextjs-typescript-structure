@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AppBarContainer } from '../../styles/pages/components/AppBar/index'
 
 const AppBar: React.FC = () => {
@@ -10,6 +10,9 @@ const AppBar: React.FC = () => {
     { id: '005', tittle: 'Settings', icon: 'fa fa-cog' },
     { id: '006', tittle: 'Sing-Out', icon: 'fa fa-sign-out' }
   ])
+
+  const activeSlideRef = useRef(null)
+
   useEffect(() => console.log(items), [])
 
   return (
@@ -18,7 +21,7 @@ const AppBar: React.FC = () => {
         <ul>
           {items.map(item => (
             <li {...items} key={item.id}>
-              <a>
+              <a href="#">
                 <span className="icon">
                   <i className={item.icon} />
                 </span>
