@@ -25,12 +25,12 @@ export default class MyDocument extends Document {
       const initialProps = await Document.getInitialProps(ctx)
       return {
         ...initialProps,
-        styles: (
-          <>
+        styles: [
+          <React.Fragment key="w1s">
             {initialProps.styles}
             {sheet.getStyleElement()}
-          </>
-        )
+          </React.Fragment>
+        ]
       }
     } finally {
       sheet.seal()
@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
           <meta charSet="utf-8" />
 
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=optional"
             rel="stylesheet"
           />
 
